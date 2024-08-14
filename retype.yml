@@ -1,0 +1,11 @@
+input: .
+output: .retype
+url: # Add your website address here
+branding:
+   title: SmartTouch Interactive
+   label: Docs
+links:
+   - text: Contact Us
+     link: https://smarttouchinteractive.com/contact-us/
+footer:
+   copyright: '&copy; Copyright {{ year }}. All rights reserved.'

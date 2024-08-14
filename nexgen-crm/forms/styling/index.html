@@ -9,32 +9,33 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Welcome</title>
-    <meta name="title" content="Welcome">
-    <meta name="description" content="Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.">
+    <title>Styling</title>
+    <meta name="title" content="Styling">
+    <meta name="description" content="The style of the form can be customized in CSS via CSS3 variables (recommended) or directly customizing the selector itself.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/">
+    <link rel="canonical" href="/nexgen-crm/forms/styling/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
-    <meta property="og:title" content="Welcome">
-    <meta property="og:description" content="Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.">
+    <meta property="og:url" content="/nexgen-crm/forms/styling/">
+    <meta property="og:title" content="Styling">
+    <meta property="og:description" content="The style of the form can be customized in CSS via CSS3 variables (recommended) or directly customizing the selector itself.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/">
-    <meta property="twitter:title" content="Welcome">
-    <meta property="twitter:description" content="Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.">
+    <meta property="twitter:url" content="/nexgen-crm/forms/styling/">
+    <meta property="twitter:title" content="Styling">
+    <meta property="twitter:description" content="The style of the form can be customized in CSS via CSS3 variables (recommended) or directly customizing the selector itself.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="resources/css/retype.css?v=3.5.0.776910339601" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.776910339601" rel="stylesheet">
 
-    <script data-cfasync="false" src="resources/js/config.js?v=3.5.0.776910339601" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="resources/js/lunr.js?v=3.5.0.776910339601" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.776910339601" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.776910339601" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.776910339601" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -49,7 +50,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">SmartTouch Interactive</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
@@ -163,13 +164,82 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="welcome" class="break-words">
+<doc-anchor-target id="styling" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#welcome">#</doc-anchor-trigger>
-        <span>Welcome</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#styling">#</doc-anchor-trigger>
+        <span>Styling</span>
     </h1>
 </doc-anchor-target>
-<p>Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.</p>
+<p>The style of the form can be customized in CSS via CSS3 variables (recommended) or directly customizing the selector itself.</p>
+<doc-anchor-target id="individual-css-variables">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#individual-css-variables">#</doc-anchor-trigger>
+        <span>Individual CSS Variables</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">.stForm {
+	--stform-font-style: normal;
+	--stform-font-weight: 400;
+	--stform-font-size: 16px;
+	--stform-font-line-height: 1.2em;
+	--stform-font-family: sans-serif;
+	--stform-label-font-style: normal;
+	--stform-label-font-weight: 400;
+	--stform-label-font-size: 16px;
+	--stform-label-font-line-height: 1.2em;
+	--stform-label-font-family: sans-serif;
+	--stform-field-padding: 10px;
+	--stform-field-color: #444;
+	--stform-field-background: #fff;
+	--stform-field-radius: 0px;
+	--stform-field-border-size: 1px;
+	--stform-field-border-style: solid;
+	--stform-field-border-color: #ccc;
+	--stform-field-font-style: normal;
+	--stform-field-font-weight: 400;
+	--stform-field-font-size: 16px;
+	--stform-field-font-line-height: 1.2em;
+	--stform-field-font-family: sans-serif;
+	--stform-button-padding: 15px 30px;
+	--stform-button-radius: 4px;
+	--stform-button-color: #fff;
+	--stform-button-background: var(--primaryColor);
+	--stform-button-border-size: 0;
+	--stform-button-border-style: solid;
+	--stform-button-border-color: var(--primaryColor);
+	--stform-button-font-style: normal;
+	--stform-button-font-weight: 400;
+	--stform-button-font-size: 16px;
+	--stform-button-font-line-height: 1.2em;
+	--stform-button-font-family: sans-serif;
+	--stform-disclaimer-font-style: italic;
+	--stform-disclaimer-font-weight: 400;
+	--stform-disclaimer-font-size: 14px;
+	--stform-disclaimer-font-line-height: 1.2em;
+	--stform-disclaimer-font-family: sans-serif;
+	--stform-checkbox-size: 24px;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="combined-css-variables">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#combined-css-variables">#</doc-anchor-trigger>
+        <span>Combined CSS Variables</span>
+    </h3>
+</doc-anchor-target>
+<p>These variables can be used if you prefer to use combined CSS variable rather than the individual CSS variables above.  The defaults use the individual variables above to create a combined variable, so it is recommended to use the individual variables unless you need more control of the values.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">.stForm {
+	--stform-field-border: var(--stform-field-border-size) var(--stform-field-border-style) var(--stform-field-border-color);
+	--stform-button-border: var(--stform-button-border-size) var(--stform-button-border-style) var(--stform-button-border-color);
+	--stform-font: var(--stform-font-style) var(--stform-font-weight) var(--stform-font-size) / var(--stform-font-line-heigh	(--stform-font-family);
+	--stform-label-font: var(--stform-label-font-style) var(--stform-label-font-weight) var(--stform-label-font-size)	(--stform-label-font-line-height) var(--stform-label-font-family);
+	--stform-field-font: var(--stform-field-font-style) var(--stform-field-font-weight) var(--stform-field-font-size)	(--stform-field-font-line-height) var(--stform-field-font-family);
+	--stform-button-font: var(--stform-button-font-style) var(--stform-button-font-weight) var(--stform-button-font-size)	(--stform-button-font-line-height) var(--stform-button-font-family);
+	--stform-disclaimer-font: var(--stform-disclaimer-font-style) var(--stform-disclaimer-font-weight) var(--stform-disclaimer-font-size)	(--stform-disclaimer-font-line-height) var(--stform-disclaimer-font-family);
+}
+</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -179,16 +249,16 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../nexgen-crm/forms/customizing/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Customizing</span>
+                                            </span>
+                                        </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="nexgen-crm/forms/customizing/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Customizing</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -229,6 +299,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Welcome", isRoot: true, level: 0, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Styling", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

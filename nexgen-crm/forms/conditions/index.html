@@ -9,32 +9,32 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Welcome</title>
-    <meta name="title" content="Welcome">
-    <meta name="description" content="Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.">
+    <title>Conditions</title>
+    <meta name="title" content="Conditions">
+    <meta name="description" content="The conditions attribute can be used to modify how certain fields display in relation to other fields values..">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/">
+    <link rel="canonical" href="/nexgen-crm/forms/conditions/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
-    <meta property="og:title" content="Welcome">
-    <meta property="og:description" content="Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.">
+    <meta property="og:url" content="/nexgen-crm/forms/conditions/">
+    <meta property="og:title" content="Conditions">
+    <meta property="og:description" content="The conditions attribute can be used to modify how certain fields display in relation to other fields values..">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/">
-    <meta property="twitter:title" content="Welcome">
-    <meta property="twitter:description" content="Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.">
+    <meta property="twitter:url" content="/nexgen-crm/forms/conditions/">
+    <meta property="twitter:title" content="Conditions">
+    <meta property="twitter:description" content="The conditions attribute can be used to modify how certain fields display in relation to other fields values..">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="resources/css/retype.css?v=3.5.0.778701773918" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.778701773918" rel="stylesheet">
 
-    <script data-cfasync="false" src="resources/js/config.js?v=3.5.0.778701773918" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="resources/js/lunr.js?v=3.5.0.778701773918" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.778701773918" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.778701773918" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -49,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">SmartTouch Interactive</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
@@ -163,13 +163,43 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="welcome" class="break-words">
+<doc-anchor-target id="conditions" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#welcome">#</doc-anchor-trigger>
-        <span>Welcome</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#conditions">#</doc-anchor-trigger>
+        <span>Conditions</span>
     </h1>
 </doc-anchor-target>
-<p>Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.</p>
+<p>The conditions attribute can be used to modify how certain fields display in relation to other fields values.. for example, if a dropdown has one value show one set of fields and if another show another set of fields.  This can be a single formula, or multiple formulas separated by a pipe character (&quot;|&quot;).</p>
+<doc-anchor-target id="formula">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#formula">#</doc-anchor-trigger>
+        <span>Formula</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>CONDITION</strong> + &quot;?&quot; + <strong>THEN</strong> + &quot;:&quot; + <strong>ELSE</strong></p>
+<p>12023=1002?12024=show:12024=hide</p>
+<p><strong>CONDITION:</strong> The test to perform.  If it returns true, then <strong>THEN</strong> will be performed, otherwise <em>(optional)</em> <strong>ELSE</strong> will be performed. In the example, if field <strong>id</strong> 12023 equals <strong>value</strong> 1002, then return true.  In the case of select or checkbox fields, you can specify multiple values by comma separating them.  The condition will return true if any of the values are selected (example: 12023=1002,1003,1005). The equals sign is the only operator allowed.</p>
+<p><strong>THEN &amp; ELSE:</strong> The action to take if true, or the the action to take if false.  This formula consists of what to take action on (field id or field ids) followed by the equals sign then action to take or actions to take  (<strong>IDS</strong>=<strong>ACTIONS</strong>).  <strong>IDS</strong> is a comma separated list of field IDs to take action on.  <strong>ACTIONS</strong> is a comma separated list of actions to take.  Predefined actions are <strong>show</strong>, <strong>hide</strong>, <strong>required</strong>, <strong>optional</strong>, and <strong>clear</strong>.  If a predefined action is not used, it will instead set the value.</p>
+<blockquote>
+<p><strong>ACTIONS</strong>:<br>
+<strong>show</strong>: Show the field (12024=show)<br>
+<strong>hide</strong>: Hide the field (12024=hide)<br>
+<strong>required</strong>: Make the field required (12024=required)<br>
+<strong>optional</strong>: Make the field optional (12024=optional)<br>
+<strong>clear</strong>:  Clear the fields value (12024=clear)<br>
+<strong>(anything else)</strong>: Set the field value (12024=Hello)</p>
+</blockquote>
+<p><strong>ELSE</strong>: Optional.  If no operator is used, the formula will assume the actions should be taken on the same <strong>IDS</strong> in the <strong>THEN</strong> part of the formula.</p>
+<doc-anchor-target id="advanced-example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-example">#</doc-anchor-trigger>
+        <span>Advanced Example</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">conditions=&quot;10279=17940?3,10289=show,required:3,10289=hide,optional|10279=17938,17939,17941?10290,10291,10288,10292,10293=show:10290,10291,10288,10292,10293=hide&quot;</code></pre>
+</doc-codeblock></div>
+<p>If field 10279 equals 17940, then make fields 3 and 10289 visible and required, otherwise make fields 3 and 10289 hidden and optional.  Also, if field 10279 equals 17938, 17939, or 17941, then make fields 10290, 10291, 10288, 10292, and 10293 visible, otherwise make fields 10290, 10291, 10288, 10292, 10293 hidden.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -179,16 +209,16 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../nexgen-crm/forms/styling/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Styling</span>
+                                            </span>
+                                        </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="nexgen-crm/forms/customizing/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Customizing</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -229,6 +259,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Welcome", isRoot: true, level: 0, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Conditions", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+---
+order: 2
+---
 The style of the form can be customized in CSS via CSS3 variables (recommended) or directly customizing the selector itself.
 
 ### Individual CSS Variables

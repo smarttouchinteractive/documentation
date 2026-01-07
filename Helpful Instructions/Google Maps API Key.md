@@ -59,7 +59,10 @@ For security, restrict how the key can be used.
 ```
 https://yourwebsite.com/*
 https://www.yourwebsite.com/*
+https://*.smarttouchreview.com/* (for review sites on our server)
+https://{staging-subdomain}.wpengine{powered}.com/* (for review sites on WP Engine)
 ```
+- For WP Engine, use your actual staging url, do not add `{staging-subdomain}` and `{powered}`.
 
 #### API Restrictions
 Restrict the key to ONLY the APIs you enabled:

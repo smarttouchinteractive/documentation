@@ -9,32 +9,32 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Conditions</title>
-    <meta name="title" content="Conditions">
-    <meta name="description" content="The conditions attribute can be used to modify how certain fields display in relation to other fields values..">
+    <title>Google Maps API Key Setup Guide</title>
+    <meta name="title" content="Google Maps API Key Setup Guide">
+    <meta name="description" content="To display Google Maps on your website, Google requires an API key connected to an active billing account">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/nexgen-crm/forms/conditions/">
+    <link rel="canonical" href="/helpful-instructions/google-maps-api-key/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/nexgen-crm/forms/conditions/">
-    <meta property="og:title" content="Conditions">
-    <meta property="og:description" content="The conditions attribute can be used to modify how certain fields display in relation to other fields values..">
+    <meta property="og:url" content="/helpful-instructions/google-maps-api-key/">
+    <meta property="og:title" content="Google Maps API Key Setup Guide">
+    <meta property="og:description" content="To display Google Maps on your website, Google requires an API key connected to an active billing account">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/nexgen-crm/forms/conditions/">
-    <meta property="twitter:title" content="Conditions">
-    <meta property="twitter:description" content="The conditions attribute can be used to modify how certain fields display in relation to other fields values..">
+    <meta property="twitter:url" content="/helpful-instructions/google-maps-api-key/">
+    <meta property="twitter:title" content="Google Maps API Key Setup Guide">
+    <meta property="twitter:description" content="To display Google Maps on your website, Google requires an API key connected to an active billing account">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.11.0.821130153916" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.821130153916" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.821130153916" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.821130153916" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.821130153916" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.821130153916" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -49,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="retype-branding-logo" href="../../../" class="flex items-center leading-snug text-xl">
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">SmartTouch Interactive</span>
                         </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
                     </div>
@@ -163,43 +163,139 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="conditions" class="break-words">
+<doc-anchor-target id="google-maps-api-key-setup-guide" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#conditions">#</doc-anchor-trigger>
-        <span>Conditions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#google-maps-api-key-setup-guide">#</doc-anchor-trigger>
+        <span>Google Maps API Key Setup Guide</span>
     </h1>
 </doc-anchor-target>
-<p>The conditions attribute can be used to modify how certain fields display in relation to other fields values.. for example, if a dropdown has one value show one set of fields and if another show another set of fields.  This can be a single formula, or multiple formulas separated by a pipe character (&quot;|&quot;).</p>
-<doc-anchor-target id="formula">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#formula">#</doc-anchor-trigger>
-        <span>Formula</span>
-    </h2>
-</doc-anchor-target>
-<p><strong>CONDITION</strong> + &quot;?&quot; + <strong>THEN</strong> + &quot;:&quot; + <strong>ELSE</strong></p>
-<p>12023=1002?12024=show:12024=hide</p>
-<p><strong>CONDITION:</strong> The test to perform.  If it returns true, then <strong>THEN</strong> will be performed, otherwise <em>(optional)</em> <strong>ELSE</strong> will be performed. In the example, if field <strong>id</strong> 12023 equals <strong>value</strong> 1002, then return true.  In the case of select or checkbox fields, you can specify multiple values by comma separating them.  The condition will return true if any of the values are selected (example: 12023=1002,1003,1005). The equals sign is the only operator allowed.</p>
-<p><strong>THEN &amp; ELSE:</strong> The action to take if true, or the the action to take if false.  This formula consists of what to take action on (field id or field ids) followed by the equals sign then action to take or actions to take  (<strong>IDS</strong>=<strong>ACTIONS</strong>).  <strong>IDS</strong> is a comma separated list of field IDs to take action on.  <strong>ACTIONS</strong> is a comma separated list of actions to take.  Predefined actions are <strong>show</strong>, <strong>hide</strong>, <strong>required</strong>, <strong>optional</strong>, and <strong>clear</strong>.  If a predefined action is not used, it will instead set the value.</p>
+<p>To display Google Maps on your website, Google requires an API key connected to an <strong>active billing account</strong>.</p>
 <blockquote>
-<p><strong>ACTIONS</strong>:<br>
-<strong>show</strong>: Show the field (12024=show)<br>
-<strong>hide</strong>: Hide the field (12024=hide)<br>
-<strong>required</strong>: Make the field required (12024=required)<br>
-<strong>optional</strong>: Make the field optional (12024=optional)<br>
-<strong>clear</strong>:  Clear the fields value (12024=clear)<br>
-<strong>(anything else)</strong>: Set the field value (12024=Hello)</p>
+<p><strong>Important:</strong> Google Maps Platform pricing changed March 1, 2025. The old <strong>$200/month credit</strong> was replaced by <strong>free monthly usage caps</strong> and a <strong>tiered model</strong> (Essentials / Pro / Enterprise), plus optional subscription plans.<br />
+Review current pricing here: <a href="https://developers.google.com/maps/billing-and-pricing/pricing">https://developers.google.com/maps/billing-and-pricing/pricing</a></p>
 </blockquote>
-<p><strong>ELSE</strong>: Optional.  If no operator is used, the formula will assume the actions should be taken on the same <strong>IDS</strong> in the <strong>THEN</strong> part of the formula.</p>
-<doc-anchor-target id="advanced-example">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-example">#</doc-anchor-trigger>
-        <span>Advanced Example</span>
-    </h2>
+<hr>
+<doc-anchor-target id="step-1-visit-google-maps-platform">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-1-visit-google-maps-platform">#</doc-anchor-trigger>
+        <span>Step 1: Visit Google Maps Platform</span>
+    </h3>
 </doc-anchor-target>
+<p>Go to: <a href="https://developers.google.com/maps">https://developers.google.com/maps</a><br />
+Click <strong>Get Started</strong> and sign in with your Google account.</p>
+<hr>
+<doc-anchor-target id="step-2-create-or-select-a-project">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-2-create-or-select-a-project">#</doc-anchor-trigger>
+        <span>Step 2: Create or Select a Project</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Create a <strong>new project</strong> (recommended), or</li>
+<li>Select an existing project</li>
+</ul>
+<p>Use a clear name such as: <strong>Your Company Website Maps</strong></p>
+<hr>
+<doc-anchor-target id="step-3-enable-billing-required">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-3-enable-billing-required">#</doc-anchor-trigger>
+        <span>Step 3: Enable Billing (Required)</span>
+    </h3>
+</doc-anchor-target>
+<p>Billing is required for Maps to function.</p>
+<ol>
+<li>In Google Cloud Console, open <strong>Billing</strong></li>
+<li>Create/select a billing account and <strong>link it to the Maps project</strong></li>
+<li>Add a payment method (credit card)</li>
+</ol>
+<blockquote>
+<p>Without billing enabled, map services won’t load and requests will fail.</p>
+</blockquote>
+<hr>
+<doc-anchor-target id="step-4-enable-required-apis">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-4-enable-required-apis">#</doc-anchor-trigger>
+        <span>Step 4: Enable Required APIs</span>
+    </h3>
+</doc-anchor-target>
+<p>The “Get Started” flow often enables core APIs automatically, but we still need to confirm these are enabled for your project:</p>
+<p>Enable the following APIs in <strong>APIs &amp; Services → Library</strong>:</p>
+<ul>
+<li><strong>Maps JavaScript API</strong> (for the interactive map on the website)</li>
+<li><strong>Places API</strong> (commonly used for place details, autocomplete, etc.)</li>
+<li><strong>Geocoding API</strong> (required to convert an address into latitude/longitude for map markers)</li>
+</ul>
+<hr>
+<doc-anchor-target id="step-5-create-an-api-key">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-5-create-an-api-key">#</doc-anchor-trigger>
+        <span>Step 5: Create an API Key</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li>Go to <strong>APIs &amp; Services → Credentials</strong></li>
+<li>Click <strong>Create Credentials → API Key</strong></li>
+<li>Copy the generated key</li>
+</ol>
+<hr>
+<doc-anchor-target id="step-6-restrict-the-api-key-recommended">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-6-restrict-the-api-key-recommended">#</doc-anchor-trigger>
+        <span>Step 6: Restrict the API Key (Recommended)</span>
+    </h3>
+</doc-anchor-target>
+<p>For security, restrict how the key can be used.</p>
+<doc-anchor-target id="application-restrictions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#application-restrictions">#</doc-anchor-trigger>
+        <span>Application Restrictions</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Choose <strong>HTTP referrers (websites)</strong></li>
+<li>Add your domain(s), for example:</li>
+</ul>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">conditions=&quot;10279=17940?3,10289=show,required:3,10289=hide,optional|10279=17938,17939,17941?10290,10291,10288,10292,10293=show:10290,10291,10288,10292,10293=hide&quot;</code></pre>
+<pre translate="no" class="language-none"><code v-pre class="language-none">https://yourwebsite.com/*
+https://www.yourwebsite.com/*</code></pre>
 </doc-codeblock></div>
-<p>If field 10279 equals 17940, then make fields 3 and 10289 visible and required, otherwise make fields 3 and 10289 hidden and optional.  Also, if field 10279 equals 17938, 17939, or 17941, then make fields 10290, 10291, 10288, 10292, and 10293 visible, otherwise make fields 10290, 10291, 10288, 10292, 10293 hidden.</p>
+<doc-anchor-target id="api-restrictions">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-restrictions">#</doc-anchor-trigger>
+        <span>API Restrictions</span>
+    </h4>
+</doc-anchor-target>
+<p>Restrict the key to ONLY the APIs you enabled:</p>
+<ul>
+<li>Maps JavaScript API</li>
+<li>Places API</li>
+<li>Geocoding API</li>
+</ul>
+<p>Save changes.</p>
+<hr>
+<doc-anchor-target id="step-7-share-the-api-key">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-7-share-the-api-key">#</doc-anchor-trigger>
+        <span>Step 7: Share the API Key</span>
+    </h3>
+</doc-anchor-target>
+<p>Send us:</p>
+<ul>
+<li>The API key</li>
+</ul>
+<p>We do <strong>not</strong> need access to your Google account.  We would be happy to jump on a Zoom meeting to walk you through it if you need assistance.</p>
+<hr>
+<doc-anchor-target id="notes-on-billing--cost-control-optional-but-helpful">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#notes-on-billing--cost-control-optional-but-helpful">#</doc-anchor-trigger>
+        <span>Notes on Billing &amp; Cost Control (Optional but Helpful)</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Google uses a usage-based model with <strong>free monthly usage caps per SKU</strong> (and optional subscriptions).</li>
+<li>You can set up <strong>budgets and alerts</strong> in Google Cloud Billing to avoid surprises, but for typical client websites billing will be free or minimal.</li>
+<li>Review current pricing anytime here: <a href="https://developers.google.com/maps/billing-and-pricing/pricing">https://developers.google.com/maps/billing-and-pricing/pricing</a></li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
@@ -209,16 +305,23 @@
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../nexgen-crm/forms/styling/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Styling</span>
+                                                <span class="block mt-1">Welcome</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../nexgen-crm/forms/customizing/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">Customizing</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -259,6 +362,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Conditions", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Google Maps API Key Setup Guide", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842992870169">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Event Tracking</title>
+    <meta name="title" content="Event Tracking">
+    <meta name="description" content="The SmartTouch script (smarttouch.js) tracks user engagement events and pushes them to:">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://documentation.smarttouchinteractive.com/nexgen-crm/event-tracking/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://documentation.smarttouchinteractive.com/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://documentation.smarttouchinteractive.com/nexgen-crm/event-tracking/">
+    <meta property="og:title" content="Event Tracking">
+    <meta property="og:description" content="The SmartTouch script (smarttouch.js) tracks user engagement events and pushes them to:">
+    <meta property="og:site_name" content="SmartTouch Interactive">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://documentation.smarttouchinteractive.com/nexgen-crm/event-tracking/">
+    <meta name="twitter:title" content="Event Tracking">
+    <meta name="twitter:description" content="The SmartTouch script (smarttouch.js) tracks user engagement events and pushes them to:">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://documentation.smarttouchinteractive.com/nexgen-crm/event-tracking/event-tracking.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=4.6.0.842992870169" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.842992870169" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.842992870169" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.842992870169" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://documentation.smarttouchinteractive.com/" class="flex items-center leading-snug text-xl">
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">SmartTouch Interactive</span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://smarttouchinteractive.com/contact-us/">Contact Us</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://smarttouchinteractive.com/contact-us/">Contact Us</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="event-tracking">Event Tracking</h1>
+<p>The SmartTouch script (<code translate="no" v-pre>smarttouch.js</code>) tracks user engagement events and pushes them to:</p>
+<ul>
+<li><code translate="no" v-pre>window.dataLayer</code> as a <code translate="no" v-pre>GA4 Event</code> (for Google Tag Manager / GA4)</li>
+<li><code translate="no" v-pre>window.uetq</code> (Microsoft/Bing UET tag), and</li>
+<li>an internal <code translate="no" v-pre>events</code> array used for form-submission reporting.</li>
+</ul>
+<p>Every tracked event carries a common set of properties:</p>
+<retype-table copy-text="| Property                                               | Description                                                                                                      |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `stEventName`                                          | The event/action name (e.g. `Click to Call`, `Driving Directions`, custom name)                                  |
+| `stLabel`                                              | Human readable label for the element/event                                                                       |
+| `stLocation`                                           | Site identifier, from `smarttouch.website` (default `'Website'`)                                                 |
+| `stAbsoluteTracking`                                   | Lead source, from `smarttouch.leadSource` (default `'Direct'`)                                                   |
+| `stCommunity` / `stBuilder` / `stFloorplan` / `stSpec` | Optional context, auto-filled if `smarttouch.community` / `.builder` / `.floorplan` / `.spec` are set as strings |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>stEventName</code></td>
+<td>The event/action name (e.g. <code translate="no" v-pre>Click to Call</code>, <code translate="no" v-pre>Driving Directions</code>, custom name)</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>stLabel</code></td>
+<td>Human readable label for the element/event</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>stLocation</code></td>
+<td>Site identifier, from <code translate="no" v-pre>smarttouch.website</code> (default <code translate="no" v-pre>'Website'</code>)</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>stAbsoluteTracking</code></td>
+<td>Lead source, from <code translate="no" v-pre>smarttouch.leadSource</code> (default <code translate="no" v-pre>'Direct'</code>)</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>stCommunity</code> / <code translate="no" v-pre>stBuilder</code> / <code translate="no" v-pre>stFloorplan</code> / <code translate="no" v-pre>stSpec</code></td>
+<td>Optional context, auto-filled if <code translate="no" v-pre>smarttouch.community</code> / <code translate="no" v-pre>.builder</code> / <code translate="no" v-pre>.floorplan</code> / <code translate="no" v-pre>.spec</code> are set as strings</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>Each element is only tracked once per page load (deduplicated via an internal flag on the element).</p>
+<hr>
+<h2 id="automatic-tracking-no-setup-required">Automatic Tracking (no setup required)</h2>
+<p>These fire automatically without any attributes or code, based on link <code translate="no" v-pre>href</code>:</p>
+<retype-table copy-text="| Event                | Trigger                                                            |
+| -------------------- | ------------------------------------------------------------------ |
+| `Click to Call`      | Any `a[href^=&quot;tel:&quot;]` link                                         |
+| `Click to Email`     | Any `a[href^=&quot;mailto:&quot;]` link                                      |
+| `Driving Directions` | Any link to `google.com/maps`, `goo.gl/maps`, or `maps.app.goo.gl` |
+| `Form Submission`    | Fires automatically when a SmartTouch form successfully submits    |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>Click to Call</code></td>
+<td>Any <code translate="no" v-pre>a[href^=&quot;tel:&quot;]</code> link</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Click to Email</code></td>
+<td>Any <code translate="no" v-pre>a[href^=&quot;mailto:&quot;]</code> link</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Driving Directions</code></td>
+<td>Any link to <code translate="no" v-pre>google.com/maps</code>, <code translate="no" v-pre>goo.gl/maps</code>, or <code translate="no" v-pre>maps.app.goo.gl</code></td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>Form Submission</code></td>
+<td>Fires automatically when a SmartTouch form successfully submits</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<p>To disable any of these, set the corresponding flag to <code translate="no" v-pre>false</code> before the elements render:</p>
+<div id="automatic-tracking-no-setup-required-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.trackCalls = false; // disable Click to Call
+window.smarttouch.trackEmails = false; // disable Click to Email
+window.smarttouch.trackMaps = false; // disable Driving Directions</code></pre>
+</doc-codeblock></div>
+<hr>
+<h2 id="1-data-attribute-tracking-recommended">1. Data Attribute Tracking (recommended)</h2>
+<p>The simplest way to track a custom engagement event is to add a <code translate="no" v-pre>data-sttrack</code> attribute to any clickable element. No JavaScript is required, and it works on elements added to the page at any time (SmartTouch watches the DOM for new matches).</p>
+<div id="1-data-attribute-tracking-recommended-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;button data-sttrack=&quot;Brochure Download&quot;&gt;Download Brochure&lt;/button&gt;</code></pre>
+</doc-codeblock></div>
+<p>Clicking this button tracks an <code translate="no" v-pre>Engagement</code> event named <code translate="no" v-pre>Brochure Download</code>, using the element&#x27;s text as the label.</p>
+<h3 id="supported-data-attributes">Supported data attributes</h3>
+<retype-table copy-text="| Attribute          | Required | Description                                                                                         |
+| ------------------ | -------- | --------------------------------------------------------------------------------------------------- |
+| `data-sttrack`     | Yes      | The event name (`stEventName`). Presence of this attribute is what enables tracking on the element. |
+| `data-stlabel`     | No       | Overrides the auto-detected label (`stLabel`).                                                      |
+| `data-stcommunity` | No       | Overrides `stCommunity` for this event only.                                                        |
+| `data-stbuilder`   | No       | Overrides `stBuilder` for this event only.                                                          |
+| `data-stfloorplan` | No       | Overrides `stFloorplan` for this event only.                                                        |
+| `data-stspec`      | No       | Overrides `stSpec` for this event only.                                                             |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>data-sttrack</code></td>
+<td>Yes</td>
+<td>The event name (<code translate="no" v-pre>stEventName</code>). Presence of this attribute is what enables tracking on the element.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>data-stlabel</code></td>
+<td>No</td>
+<td>Overrides the auto-detected label (<code translate="no" v-pre>stLabel</code>).</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>data-stcommunity</code></td>
+<td>No</td>
+<td>Overrides <code translate="no" v-pre>stCommunity</code> for this event only.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>data-stbuilder</code></td>
+<td>No</td>
+<td>Overrides <code translate="no" v-pre>stBuilder</code> for this event only.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>data-stfloorplan</code></td>
+<td>No</td>
+<td>Overrides <code translate="no" v-pre>stFloorplan</code> for this event only.</td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>data-stspec</code></td>
+<td>No</td>
+<td>Overrides <code translate="no" v-pre>stSpec</code> for this event only.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<h3 id="example-with-overrides">Example with overrides</h3>
+<div id="example-with-overrides-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;a
+	href=&quot;/floorplans/the-oakwood&quot;
+	data-sttrack=&quot;Floorplan View&quot;
+	data-stlabel=&quot;The Oakwood&quot;
+	data-stcommunity=&quot;Sunset Ridge&quot;
+	data-stfloorplan=&quot;The Oakwood&quot;&gt;
+	View Floorplan
+&lt;/a&gt;</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p><code translate="no" v-pre>data-sttrack</code> events are dispatched directly to <code translate="no" v-pre>dataLayer</code>/<code translate="no" v-pre>uetq</code> and are <strong>not</strong> added to the internal <code translate="no" v-pre>events</code> array (which only tracks calls, emails, directions, and form submissions).</p>
+</blockquote>
+<hr>
+<h2 id="2-javascript-api-tracking">2. JavaScript API Tracking</h2>
+<p>Use the <code translate="no" v-pre>window.smarttouch</code> instance methods when you need tracking logic driven from code (e.g. inside a framework component, or when a data attribute isn&#x27;t practical).</p>
+<h3 id="smarttouchtrackeventname-label-extraprops"><code translate="no" v-pre>smarttouch.trackEvent(name, label, extraProps)</code></h3>
+<p>Tracks a generic <code translate="no" v-pre>Engagement</code> event.</p>
+<div id="smarttouchtrackeventname-label-extraprops-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.trackEvent('Brochure Download', 'Sunset Ridge Brochure', { stCommunity: 'Sunset Ridge' });</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchtrackcallel-label-extraprops--smarttouchtrackemailel-label-extraprops--smarttouchtrackmapel-label-extraprops"><code translate="no" v-pre>smarttouch.trackCall(el, label, extraProps)</code> / <code translate="no" v-pre>smarttouch.trackEmail(el, label, extraProps)</code> / <code translate="no" v-pre>smarttouch.trackMap(el, label, extraProps)</code></h3>
+<p>Manually track a call, email, or maps link click (useful if automatic tracking was disabled, or the link is generated dynamically). <code translate="no" v-pre>el</code> must be the anchor element; <code translate="no" v-pre>label</code> and <code translate="no" v-pre>extraProps</code> are optional overrides.</p>
+<div id="smarttouchtrackcallel-label-extraprops--smarttouchtrackemailel-label-extraprops--smarttouchtrackmapel-label-extraprops-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">document.querySelector('#custom-call-link').addEventListener('click', (e) =&gt; {
+	window.smarttouch.trackCall(e.currentTarget);
+});</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchtrackformlabel-extraprops"><code translate="no" v-pre>smarttouch.trackForm(label, extraProps)</code></h3>
+<p>Manually track a <code translate="no" v-pre>Form Submission</code> event (SmartTouch forms do this automatically).</p>
+<div id="smarttouchtrackformlabel-extraprops-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.trackForm('Contact Us', { stCommunity: 'Sunset Ridge' });</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchtrackcategory-action-label-el"><code translate="no" v-pre>smarttouch.track(category, action, label, el)</code></h3>
+<p>Generic dispatcher mirroring legacy Google Analytics <code translate="no" v-pre>category</code>/<code translate="no" v-pre>action</code>/<code translate="no" v-pre>label</code> events. Routes to the correct method above based on <code translate="no" v-pre>category</code>/<code translate="no" v-pre>action</code>:</p>
+<div id="smarttouchtrackcategory-action-label-el-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.track('Engagement', 'Brochure Download', 'Sunset Ridge Brochure');
+window.smarttouch.track('Contact', 'Click to Call', 'Sales Line', linkElement);</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchtrackclickselector-name-label-extraprops"><code translate="no" v-pre>smarttouch.trackClick(selector, name, label, extraProps)</code></h3>
+<p>Registers a persistent click listener for any current or future element matching <code translate="no" v-pre>selector</code>. Fires <code translate="no" v-pre>trackEvent(name, label, extraProps)</code> whenever a matching element is clicked.</p>
+<div id="smarttouchtrackclickselector-name-label-extraprops-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.trackClick('.hero .cta-button', 'Hero CTA Click', 'View Homes');</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchonclickselector-callback"><code translate="no" v-pre>smarttouch.onClick(selector, callback)</code></h3>
+<p>Registers a click callback for elements matching <code translate="no" v-pre>selector</code>. <code translate="no" v-pre>callback(el)</code> receives the clicked element; call any tracking method yourself inside it.</p>
+<div id="smarttouchonclickselector-callback-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.onClick('.gallery-thumb', (el) =&gt; {
+	window.smarttouch.trackEvent('Gallery Image View', el.dataset.imageTitle);
+});</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchonloadselector-callback"><code translate="no" v-pre>smarttouch.onLoad(selector, callback)</code></h3>
+<p>Fires <code translate="no" v-pre>callback(el)</code> once, as soon as an element matching <code translate="no" v-pre>selector</code> appears in the DOM (does not require a click).</p>
+<div id="smarttouchonloadselector-callback-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.onLoad('.virtual-tour-embed', (el) =&gt; {
+	window.smarttouch.trackEvent('Virtual Tour Viewed', el.dataset.community);
+});</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchtrackadvancedselector-target-callback"><code translate="no" v-pre>smarttouch.trackAdvanced(selector, target, callback)</code></h3>
+<p>For a container matching <code translate="no" v-pre>selector</code>, listens for clicks on any descendant matching <code translate="no" v-pre>target</code>. <code translate="no" v-pre>callback(container)</code> must return an array of arguments to pass to <code translate="no" v-pre>trackEvent(...)</code>, or a falsy value to skip tracking. Works on elements added to the page at any time.</p>
+<div id="smarttouchtrackadvancedselector-target-callback-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.trackAdvanced('.community-card', 'a.details-link', (card) =&gt; {
+	return ['Community Details Click', card.dataset.communityName];
+});</code></pre>
+</doc-codeblock></div>
+<h3 id="smarttouchtrackeventadvancedbase-target-callback"><code translate="no" v-pre>smarttouch.trackEventAdvanced(base, target, callback)</code></h3>
+<p>Same behavior as <code translate="no" v-pre>trackAdvanced</code>, but binds immediately to elements present at call time (does not watch for elements added later). Use this only when the elements already exist on the page when it&#x27;s called.</p>
+<hr>
+<h2 id="global-helper-functions">Global Helper Functions</h2>
+<p>Convenience wrappers around the API above, exposed on <code translate="no" v-pre>window</code> for use in inline <code translate="no" v-pre>onclick</code> handlers or non-module scripts:</p>
+<retype-table copy-text="| Function                                  | Equivalent                                  |
+| ----------------------------------------- | ------------------------------------------- |
+| `window.stTrack(category, action, label)` | `smarttouch.track(category, action, label)` |
+| `window.stTrackCall(el, label)`           | `smarttouch.trackCall(el, label)`           |
+| `window.stTrackMap(el, label)`            | `smarttouch.trackMap(el, label)`            |">
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Function</th>
+<th>Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>window.stTrack(category, action, label)</code></td>
+<td><code translate="no" v-pre>smarttouch.track(category, action, label)</code></td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>window.stTrackCall(el, label)</code></td>
+<td><code translate="no" v-pre>smarttouch.trackCall(el, label)</code></td>
+</tr>
+<tr>
+<td><code translate="no" v-pre>window.stTrackMap(el, label)</code></td>
+<td><code translate="no" v-pre>smarttouch.trackMap(el, label)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</retype-table>
+<div id="global-helper-functions-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;a
+	href=&quot;tel:+18005551234&quot;
+	onclick=&quot;stTrackCall(this, 'Sales Hotline')&quot;
+	&gt;Call Us&lt;/a
+&gt;</code></pre>
+</doc-codeblock></div>
+<hr>
+<h2 id="configuring-global-context">Configuring Global Context</h2>
+<p>Set these on <code translate="no" v-pre>window.smarttouch</code> (typically once, near the top of the page) so they&#x27;re automatically included on every tracked event:</p>
+<div id="configuring-global-context-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">window.smarttouch.website = 'Sunset Ridge Microsite'; // stLocation
+window.smarttouch.community = 'Sunset Ridge'; // stCommunity
+window.smarttouch.builder = 'ABC Homes'; // stBuilder
+window.smarttouch.floorplan = 'The Oakwood'; // stFloorplan
+window.smarttouch.spec = 'Lot 42'; // stSpec</code></pre>
+</doc-codeblock></div>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../nexgen-crm/forms/conditions/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Conditions</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Event Tracking", level: 2, icon: "file", hasPrism: true, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/nexgen-crm/event-tracking/event-tracking.md" }</script>
+</body>
+</html>

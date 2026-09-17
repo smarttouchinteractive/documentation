@@ -1,0 +1,18 @@
+﻿# Welcome
+
+> Welcome to the SmartTouch Interactive® documentation, please use the left side navigation to browse available help documents.
+
+- [Welcome](https://documentation.smarttouchinteractive.com/welcome.md): Welcome
+
+## Helpful Instructions
+
+- [Google Maps API Key Setup Guide](https://documentation.smarttouchinteractive.com/helpful-instructions/google-maps-api-key.md): To display Google Maps on your website, Google requires an API key connected to an active billing account.
+
+## NexGEN CRM
+
+### Forms
+
+- [Customizing](https://documentation.smarttouchinteractive.com/nexgen-crm/forms/customizing.md): When using NexGEN CRM forms, you are provided with two snippets of code to get started; the global code snippet and the individual form code snippet
+- [Styling](https://documentation.smarttouchinteractive.com/nexgen-crm/forms/styling.md): The style of the form can be customized in CSS via CSS3 variables (recommended) or directly customizing the selector itself.
+- [Conditions](https://documentation.smarttouchinteractive.com/nexgen-crm/forms/conditions.md): The conditions attribute can be used to modify how certain fields display in relation to other fields values.. for example, if a dropdown has one value show one set of fields and if another show another set of fields.
+- [Event Tracking](https://documentation.smarttouchinteractive.com/nexgen-crm/event-tracking/event-tracking.md): The SmartTouch script (smarttouch.js) tracks user engagement events and pushes them to:
